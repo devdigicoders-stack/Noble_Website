@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, CheckCircle, Send, Phone, Mail, User, Briefcase, MessageSquare } from 'lucide-react';
 import { SERVICES, BRAND } from '../data/content';
+import { Toast } from '../utils/alerts';
 
 export default function QuoteModal({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
@@ -54,6 +55,10 @@ export default function QuoteModal({ isOpen, onClose }) {
     }
 
     setSubmitted(true);
+    Toast.fire({
+      icon: 'success',
+      title: 'Quote request submitted successfully!'
+    });
   };
 
   return (

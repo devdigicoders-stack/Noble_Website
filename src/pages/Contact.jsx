@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Send, MessageSquare, CheckCircle, Shield } from 'lucide-react';
 import { BRAND, SERVICES } from '../data/content';
+import { Toast } from '../utils/alerts';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -31,10 +32,15 @@ export default function Contact() {
     }
 
     setSubmitted(true);
+    Toast.fire({
+      icon: 'success',
+      title: 'Inquiry received! Redirecting to WhatsApp...'
+    });
+
     setTimeout(() => {
       const text = `Hello Noble Housekeeping,%0A%0A*Name:* ${encodeURIComponent(formData.name)}%0A*Phone:* ${encodeURIComponent(formData.phone)}%0A*Service Required:* ${encodeURIComponent(formData.service)}%0A*Message:* ${encodeURIComponent(formData.message)}`;
       window.open(`https://wa.me/${BRAND.whatsapp.replace('+', '')}?text=${text}`, '_blank');
-    }, 1000);
+    }, 1200);
   };
 
   return (
