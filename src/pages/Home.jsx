@@ -99,11 +99,11 @@ export default function Home({ onOpenQuote }) {
 
               {/* Button: Call Now */}
               <a
-                href={`tel:${BRAND.phonePrimary.replace(/\s+/g, '')}`}
+                href={`tel:${BRAND.phoneCalling.replace(/\s+/g, '')}`}
                 className="bg-[#0A1931]/90 hover:bg-[#152A4A] backdrop-blur-md text-[#DFBF7A] border border-[#C5A059]/80 font-extrabold px-7 py-4 rounded-full text-xs uppercase tracking-wider transition shadow-2xl flex items-center gap-2"
               >
                 <Phone className="w-4 h-4 text-[#DFBF7A]" />
-                <span>Call Now: {BRAND.phonePrimary}</span>
+                <span>Call Now: {BRAND.phoneCalling}</span>
               </a>
             </motion.div>
           </div>
@@ -453,11 +453,11 @@ export default function Home({ onOpenQuote }) {
             <div className="flex flex-wrap items-center justify-center gap-4 shrink-0">
               {/* Call Button */}
               <a
-                href={`tel:${BRAND.phonePrimary.replace(/\s+/g, '')}`}
+                href={`tel:${BRAND.phoneCalling.replace(/\s+/g, '')}`}
                 className="gold-gradient text-[#0A1931] font-extrabold px-7 py-3.5 rounded-full text-xs uppercase tracking-wider shadow-lg hover:brightness-105 active:scale-95 transition flex items-center gap-2"
               >
                 <Phone className="w-4 h-4" />
-                <span>Call Now ({BRAND.phonePrimary})</span>
+                <span>Call Now ({BRAND.phoneCalling})</span>
               </a>
               {/* WhatsApp Button */}
               <a

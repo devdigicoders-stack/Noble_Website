@@ -40,13 +40,13 @@ export default function Navbar({ onOpenQuote }) {
       }`}>
         <div className="max-w-[1520px] mx-auto px-3 sm:px-6">
           
-          {/* Exact ISS Capsule Navbar with Logo Navy & Gold Palette */}
-          <div className="bg-white/95 backdrop-blur-md rounded-full shadow-lg border border-slate-200/90 px-4 sm:px-6 py-2.5 flex items-center justify-between transition-all">
+          {/* Exact ISS Capsule Navbar with Solid Pure White Background matching the Logo */}
+          <div className="bg-white rounded-full shadow-lg border border-slate-200/90 px-4 sm:px-6 py-2.5 flex items-center justify-between transition-all">
             
             {/* Logo */}
             <Link to="/" className="flex items-center group py-0.5">
               <img 
-                src="/logo.svg" 
+                src="/logo.png" 
                 alt={BRAND.name} 
                 className="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105" 
               />

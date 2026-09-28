@@ -17,7 +17,7 @@ export default function Footer({ onOpenQuote }) {
           {/* Col 1: Brand & Registration (4 cols) */}
           <div className="lg:col-span-4 space-y-6">
             <div className="bg-white p-3 rounded-2xl inline-block shadow-md">
-              <img src="/logo.svg" alt={BRAND.name} className="h-12 w-auto object-contain" />
+              <img src="/logo.png" alt={BRAND.name} className="h-12 w-auto object-contain" />
             </div>
             
             <p className="text-slate-300 text-sm leading-relaxed max-w-sm">
@@ -86,32 +86,28 @@ export default function Footer({ onOpenQuote }) {
           {/* Col 4: Contact & Locations (3 cols) */}
           <div className="lg:col-span-3 space-y-4">
             <h4 className="text-white font-extrabold text-base tracking-wide uppercase text-xs text-[#DFBF7A]">
-              Qatar Headquarters
+              Contact Details
             </h4>
             <ul className="space-y-3.5 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[#DFBF7A] shrink-0 mt-1" />
-                <span>{BRAND.location} (State of Qatar)</span>
+                <span>{BRAND.location}</span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-[#DFBF7A] shrink-0 mt-1" />
                 <div>
-                  <a href={`tel:${BRAND.phonePrimary.replace(/\s+/g, '')}`} className="hover:text-white text-slate-200 font-semibold block">
-                    {BRAND.phonePrimary}
-                  </a>
-                  <a href={`tel:${BRAND.phoneSecondary.replace(/\s+/g, '')}`} className="hover:text-white text-slate-400 text-xs">
-                    {BRAND.phoneSecondary} (Calling Hotline)
+                  <span className="text-xs text-slate-400 block font-medium">Calling Hotline</span>
+                  <a href={`tel:${BRAND.phoneCalling.replace(/\s+/g, '')}`} className="hover:text-white text-slate-200 font-semibold block">
+                    {BRAND.phoneCalling}
                   </a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-[#DFBF7A] shrink-0 mt-1" />
                 <div>
+                  <span className="text-xs text-slate-400 block font-medium">Official Email</span>
                   <a href={`mailto:${BRAND.email}`} className="hover:text-white text-slate-200 block">
                     {BRAND.email}
-                  </a>
-                  <a href={`mailto:${BRAND.altEmail}`} className="hover:text-white text-slate-400 text-xs">
-                    {BRAND.altEmail}
                   </a>
                 </div>
               </li>

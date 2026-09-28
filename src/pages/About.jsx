@@ -66,11 +66,11 @@ export default function About({ onOpenQuote }) {
                 Request Quotation
               </button>
               <a
-                href={`tel:${BRAND.phonePrimary.replace(/\s+/g, '')}`}
+                href={`tel:${BRAND.phoneCalling.replace(/\s+/g, '')}`}
                 className="bg-[#0A1931] text-white font-bold px-5 py-2.5 rounded-lg text-xs uppercase tracking-wider hover:bg-[#152A4A] transition flex items-center gap-2"
               >
                 <Phone className="w-4 h-4 text-[#DFBF7A]" />
-                Direct Hotline
+                Direct Hotline ({BRAND.phoneCalling})
               </a>
             </div>
           </div>

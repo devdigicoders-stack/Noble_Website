@@ -101,11 +101,11 @@ export default function WhyChooseUs({ onOpenQuote }) {
                 Get a Free Quote
               </button>
               <a
-                href={`tel:${BRAND.phonePrimary.replace(/\s+/g, '')}`}
+                href={`tel:${BRAND.phoneCalling.replace(/\s+/g, '')}`}
                 className="bg-white/10 hover:bg-white/20 border border-slate-600 text-white font-bold px-6 py-3.5 rounded-lg text-xs uppercase tracking-wider transition flex items-center gap-2"
               >
                 <Phone className="w-4 h-4 text-[#DFBF7A]" />
-                Call {BRAND.phonePrimary}
+                Call {BRAND.phoneCalling}
               </a>
             </div>
           </div>
