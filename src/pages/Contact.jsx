@@ -88,28 +88,17 @@ export default function Contact() {
             </div>
 
             <div className="space-y-3.5">
-              {/* Calling Number */}
+              {/* Phone Numbers */}
               <div className="p-4 rounded-2xl bg-[#F8F6F0] border border-slate-200/80 flex items-center gap-4">
                 <div className="w-11 h-11 rounded-xl gold-gradient flex items-center justify-center text-[#0A1931] shrink-0 shadow-sm">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500">Calling Number</h4>
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500">Phone</h4>
                   <p className="text-sm text-slate-800 font-bold mt-0.5">
-                    <a href={`tel:${BRAND.phoneCalling.replace(/\s+/g, '')}`} className="hover:text-[#C5A059]">{BRAND.phoneCalling}</a>
-                  </p>
-                </div>
-              </div>
-
-              {/* WhatsApp Number */}
-              <div className="p-4 rounded-2xl bg-[#F8F6F0] border border-slate-200/80 flex items-center gap-4">
-                <div className="w-11 h-11 rounded-xl bg-[#25D366] flex items-center justify-center text-white shrink-0 shadow-sm">
-                  <MessageSquare className="w-5 h-5" />
-                </div>
-                <div>
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500">WhatsApp</h4>
-                  <p className="text-sm text-slate-800 font-bold mt-0.5">
-                    <a href={`https://wa.me/${BRAND.whatsapp.replace('+', '')}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#25D366]">{BRAND.whatsappDisplay}</a>
+                    <a href={`tel:${BRAND.phonePrimary.replace(/\s+/g, '')}`} className="hover:text-[#C5A059]">{BRAND.phonePrimary}</a>
+                    <span className="text-slate-400 mx-2">/</span>
+                    <a href={`tel:${BRAND.phoneSecondary.replace(/\s+/g, '')}`} className="hover:text-[#C5A059]">{BRAND.phoneSecondary}</a>
                   </p>
                 </div>
               </div>
@@ -120,16 +109,27 @@ export default function Contact() {
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500">Email Address</h4>
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500">Email</h4>
                   <p className="text-sm text-slate-800 font-bold mt-0.5">
                     <a href={`mailto:${BRAND.email}`} className="hover:text-[#C5A059]">{BRAND.email}</a>
                   </p>
                 </div>
               </div>
 
-              {/* Location */}
+              {/* CR Number */}
               <div className="p-4 rounded-2xl bg-[#F8F6F0] border border-slate-200/80 flex items-center gap-4">
                 <div className="w-11 h-11 rounded-xl gold-gradient flex items-center justify-center text-[#0A1931] shrink-0 shadow-sm">
+                  <Shield className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500">CR Number</h4>
+                  <p className="text-sm text-slate-800 font-bold mt-0.5">{BRAND.crNumber}</p>
+                </div>
+              </div>
+
+              {/* Location */}
+              <div className="p-4 rounded-2xl bg-[#F8F6F0] border border-slate-200/80 flex items-center gap-4">
+                <div className="w-11 h-11 rounded-xl bg-[#0A1931] flex items-center justify-center text-[#DFBF7A] shrink-0 shadow-sm">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>

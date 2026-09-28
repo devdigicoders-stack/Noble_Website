@@ -4,7 +4,7 @@ import {
   MapPin, Phone, Mail, Shield, 
   MessageSquare
 } from 'lucide-react';
-import { BRAND, SERVICES } from '../data/content';
+import { FOOTER_INFO, SERVICES } from '../data/content';
 
 export default function Footer({ onOpenQuote }) {
   return (
@@ -14,28 +14,31 @@ export default function Footer({ onOpenQuote }) {
       <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12">
           
-          {/* Col 1: Logo & CR Number & Social Icons (4 cols) */}
-          <div className="lg:col-span-4 space-y-6">
+          {/* Col 1: Logo, Sector & CR Number & Social Icons (4 cols) */}
+          <div className="lg:col-span-4 space-y-5">
             <div className="bg-white p-3 rounded-2xl inline-block shadow-lg">
-              <img src="/logo.png" alt={BRAND.name} className="h-12 w-auto object-contain" />
+              <img src="/logo.png" alt={FOOTER_INFO.companyName} className="h-12 w-auto object-contain" />
             </div>
             
-            <p className="text-slate-300 text-sm leading-relaxed max-w-sm">
-              {BRAND.tagline}
-            </p>
+            <div>
+              <h3 className="text-white font-extrabold text-base">{FOOTER_INFO.companyName}</h3>
+              <p className="text-slate-300 text-xs font-semibold mt-0.5 text-[#DFBF7A]">
+                Sector: {FOOTER_INFO.sector}
+              </p>
+            </div>
 
             {/* CR Number */}
-            <div className="p-3.5 rounded-2xl bg-white/5 border border-[#DFBF7A]/30 inline-flex items-center gap-2.5 text-xs text-[#DFBF7A] font-semibold">
+            <div className="p-3 rounded-2xl bg-white/5 border border-[#DFBF7A]/30 inline-flex items-center gap-2.5 text-xs text-[#DFBF7A] font-semibold">
               <Shield className="w-4 h-4 text-[#DFBF7A] shrink-0" />
-              <span>Commercial Registration CR No: <strong className="text-white">{BRAND.crNumber}</strong></span>
+              <span>CR Number: <strong className="text-white">{FOOTER_INFO.crNumber}</strong></span>
             </div>
 
             {/* Social Icons */}
-            <div className="pt-2">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#DFBF7A] block mb-3">Connect With Us</span>
+            <div className="pt-1">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#DFBF7A] block mb-2.5">Connect With Us</span>
               <div className="flex items-center gap-3">
                 <a
-                  href={`https://wa.me/${BRAND.whatsapp.replace('+', '')}`}
+                  href={`https://wa.me/${FOOTER_INFO.whatsapp.replace('+', '')}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-9 h-9 rounded-xl bg-white/5 hover:bg-[#25D366] text-white flex items-center justify-center transition border border-white/10 hover:border-[#25D366]"
@@ -133,32 +136,61 @@ export default function Footer({ onOpenQuote }) {
               Contact Details
             </h4>
             <ul className="space-y-3.5 text-xs sm:text-sm">
+              {/* WhatsApp Row */}
               <li className="flex items-start gap-3">
-                <Phone className="w-4 h-4 text-[#DFBF7A] shrink-0 mt-1" />
+                <div className="w-8 h-8 rounded-lg bg-[#25D366]/15 border border-[#25D366]/30 flex items-center justify-center text-[#25D366] shrink-0 mt-0.5">
+                  <MessageSquare className="w-4 h-4" />
+                </div>
                 <div>
-                  <span className="text-[11px] text-slate-400 block uppercase font-bold">Phone</span>
-                  <a href={`tel:${BRAND.phonePrimary.replace(/\s+/g, '')}`} className="hover:text-[#DFBF7A] text-white font-bold block">
-                    {BRAND.phonePrimary}
-                  </a>
-                  <a href={`tel:${BRAND.phoneSecondary.replace(/\s+/g, '')}`} className="hover:text-[#DFBF7A] text-slate-300 font-semibold block">
-                    {BRAND.phoneSecondary}
+                  <span className="text-[11px] text-slate-400 block uppercase font-bold">WhatsApp</span>
+                  <a 
+                    href={`https://wa.me/${FOOTER_INFO.whatsapp.replace('+', '')}`} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="hover:text-[#25D366] text-white font-bold block transition"
+                  >
+                    {FOOTER_INFO.whatsappDisplay}
                   </a>
                 </div>
               </li>
+
+              {/* Calling Row */}
               <li className="flex items-start gap-3">
-                <Mail className="w-4 h-4 text-[#DFBF7A] shrink-0 mt-1" />
+                <div className="w-8 h-8 rounded-lg bg-[#DFBF7A]/15 border border-[#DFBF7A]/30 flex items-center justify-center text-[#DFBF7A] shrink-0 mt-0.5">
+                  <Phone className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="text-[11px] text-slate-400 block uppercase font-bold">Calling</span>
+                  <a 
+                    href={`tel:${FOOTER_INFO.calling.replace(/\s+/g, '')}`} 
+                    className="hover:text-[#DFBF7A] text-white font-bold block transition"
+                  >
+                    {FOOTER_INFO.calling}
+                  </a>
+                </div>
+              </li>
+
+              {/* Email Row */}
+              <li className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-lg bg-white/10 border border-white/10 flex items-center justify-center text-[#DFBF7A] shrink-0 mt-0.5">
+                  <Mail className="w-4 h-4" />
+                </div>
                 <div>
                   <span className="text-[11px] text-slate-400 block uppercase font-bold">Email</span>
-                  <a href={`mailto:${BRAND.email}`} className="hover:text-[#DFBF7A] text-white font-bold block">
-                    {BRAND.email}
+                  <a href={`mailto:${FOOTER_INFO.email}`} className="hover:text-[#DFBF7A] text-white font-bold block transition">
+                    {FOOTER_INFO.email}
                   </a>
                 </div>
               </li>
+
+              {/* Location Row */}
               <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-[#DFBF7A] shrink-0 mt-1" />
+                <div className="w-8 h-8 rounded-lg bg-white/10 border border-white/10 flex items-center justify-center text-[#DFBF7A] shrink-0 mt-0.5">
+                  <MapPin className="w-4 h-4" />
+                </div>
                 <div>
                   <span className="text-[11px] text-slate-400 block uppercase font-bold">Location</span>
-                  <span className="text-white font-semibold">{BRAND.location}</span>
+                  <span className="text-white font-semibold">{FOOTER_INFO.location}</span>
                 </div>
               </li>
             </ul>
@@ -171,10 +203,10 @@ export default function Footer({ onOpenQuote }) {
       <div className="bg-[#060E1E] border-t border-[#DFBF7A]/20 py-6 text-xs text-slate-400">
         <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-3 text-center sm:text-left">
           <p>
-            &copy; {new Date().getFullYear()} {BRAND.name}. All Rights Reserved.
+            &copy; {new Date().getFullYear()} {FOOTER_INFO.companyName}. All Rights Reserved.
           </p>
           <p className="text-[#DFBF7A]">
-            Qatar Commercial Registration CR No: {BRAND.crNumber}
+            Qatar Commercial Registration CR No: {FOOTER_INFO.crNumber}
           </p>
         </div>
       </div>
