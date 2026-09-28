@@ -8,6 +8,7 @@ export const BRAND = {
   location: "Doha, Qatar",
   phonePrimary: "+974 5041 8155",
   phoneSecondary: "+974 7165 0315",
+  phoneCalling: "+974 5041 8155",
   whatsapp: "+97450418155",
   whatsappDisplay: "+974 5041 8155",
   email: "nobeltradingco@gmail.com",
