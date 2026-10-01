@@ -201,12 +201,25 @@ export default function Footer({ onOpenQuote }) {
 
       {/* Bottom Copyright Line */}
       <div className="bg-[#060E1E] border-t border-[#DFBF7A]/20 py-6 text-xs text-slate-400">
-        <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-3 text-center sm:text-left">
-          <p>
-            &copy; {new Date().getFullYear()} {FOOTER_INFO.companyName}. All Rights Reserved.
-          </p>
-          <p className="text-[#DFBF7A]">
-            Qatar Commercial Registration CR No: {FOOTER_INFO.crNumber}
+        <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-3 text-center">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-3 text-center sm:text-left w-full">
+            <p>
+              &copy; {new Date().getFullYear()} {FOOTER_INFO.companyName}. All Rights Reserved.
+            </p>
+            <p className="text-[#DFBF7A]">
+              Qatar Commercial Registration CR No: {FOOTER_INFO.crNumber}
+            </p>
+          </div>
+          <p className="text-slate-400">
+            Designed and Development by{' '}
+            <a
+              href="https://www.worknestconnect.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#DFBF7A] hover:text-white font-semibold transition underline underline-offset-2 decoration-[#DFBF7A]/40 hover:decoration-white"
+            >
+              Worknest Connect
+            </a>
           </p>
         </div>
       </div>

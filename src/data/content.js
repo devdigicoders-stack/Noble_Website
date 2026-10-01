@@ -1,17 +1,17 @@
-// Business Details for Contact Page (Exact PDF details)
+// Business Details for Contact Page (Updated as per client requirement)
 export const BRAND = {
   name: "Noble Housekeeping Trading & Contracting Company",
   shortName: "Noble",
   tagline: "Your Home, Our Care. Cleaner. Fresher. Better.",
   subHeadline: "Trusted housekeeping, maid, nanny and home maintenance services across Qatar, all under one roof.",
   crNumber: "206871",
-  location: "Doha, Qatar",
-  phonePrimary: "+974 5041 8155",
-  phoneSecondary: "+974 7165 0315",
-  phoneCalling: "+974 5041 8155",
+  location: "Doha Qatar",
+  phonePrimary: "+974 70170145",
+  phoneSecondary: "+974 5041 8155",
+  phoneCalling: "+974 70170145",
   whatsapp: "+97450418155",
   whatsappDisplay: "+974 5041 8155",
-  email: "nobeltradingco@gmail.com",
+  email: "info@noblecontractingqa.com",
   domain: "www.noblecontractingqa.com",
 };
 
@@ -21,10 +21,10 @@ export const FOOTER_INFO = {
   sector: "Hospitality & Facility Management Services",
   crNumber: "206871",
   whatsapp: "+97450418155",
-  whatsappDisplay: "+974 50418155",
+  whatsappDisplay: "+974 5041 8155",
   calling: "+974 70170145",
   email: "info@noblecontractingqa.com",
-  location: "Doha, Qatar",
+  location: "Doha Qatar",
   domain: "www.noblecontractingqa.com"
 };
 

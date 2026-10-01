@@ -62,7 +62,7 @@ export default function Contact() {
         <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0A1931]/80 backdrop-blur-md border border-[#DFBF7A]/60 text-[#DFBF7A] text-xs font-extrabold uppercase tracking-widest shadow-xl">
             <Shield className="w-4 h-4 text-[#DFBF7A]" />
-            <span>Qatar Commercial Registration CR No: {BRAND.crNumber} &bull; Doha, Qatar</span>
+            <span>Qatar Commercial Registration CR No: {BRAND.crNumber} &bull; {BRAND.location}</span>
           </span>
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight font-serif-brand drop-shadow-2xl">
             Contact &amp; <span className="gold-text-gradient">Booking</span>
@@ -88,17 +88,19 @@ export default function Contact() {
             </div>
 
             <div className="space-y-3.5">
-              {/* Phone Numbers */}
+              {/* Phone Numbers - Calling & WhatsApp */}
               <div className="p-4 rounded-2xl bg-[#F8F6F0] border border-slate-200/80 flex items-center gap-4">
                 <div className="w-11 h-11 rounded-xl gold-gradient flex items-center justify-center text-[#0A1931] shrink-0 shadow-sm">
                   <Phone className="w-5 h-5" />
                 </div>
-                <div>
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500">Phone</h4>
+                <div className="space-y-1">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500">Calling</h4>
                   <p className="text-sm text-slate-800 font-bold mt-0.5">
-                    <a href={`tel:${BRAND.phonePrimary.replace(/\s+/g, '')}`} className="hover:text-[#C5A059]">{BRAND.phonePrimary}</a>
-                    <span className="text-slate-400 mx-2">/</span>
-                    <a href={`tel:${BRAND.phoneSecondary.replace(/\s+/g, '')}`} className="hover:text-[#C5A059]">{BRAND.phoneSecondary}</a>
+                    <a href={`tel:${BRAND.phoneCalling.replace(/\s+/g, '')}`} className="hover:text-[#C5A059]">{BRAND.phoneCalling}</a>
+                  </p>
+                  <p className="text-sm text-slate-800 font-bold">
+                    <span className="text-xs font-bold uppercase tracking-wider text-slate-500">WhatsApp: </span>
+                    <a href={`https://wa.me/${BRAND.whatsapp.replace('+', '')}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#C5A059]">{BRAND.whatsappDisplay}</a>
                   </p>
                 </div>
               </div>
