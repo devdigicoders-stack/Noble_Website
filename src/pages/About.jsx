@@ -3,6 +3,9 @@ import { motion } from 'framer-motion';
 import { Shield, Target, Eye, Award, CheckCircle2, Phone } from 'lucide-react';
 import { BRAND, CORE_VALUES } from '../data/content';
 import { DynamicIcon } from '../components/DynamicIcon';
+import heroImage from '../assets/images/Housekeeping (Full-Time).png';
+import nannyImage from '../assets/images/Nanny Service.png';
+import paintingImage from '../assets/images/Painting Work.png';
 
 export default function About({ onOpenQuote }) {
   return (
@@ -13,7 +16,7 @@ export default function About({ onOpenQuote }) {
         {/* Background Image - Noble Housekeeping Staff & Home Care */}
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=2000&q=85" 
+            src={heroImage} 
             alt="Noble Housekeeping & Contracting Qatar"
             className="w-full h-full object-cover object-[center_35%]"
           />
@@ -77,12 +80,12 @@ export default function About({ onOpenQuote }) {
 
           <div className="lg:col-span-6 grid grid-cols-2 gap-4">
             <img 
-              src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=600&q=80" 
+              src={nannyImage} 
               alt="Housekeeping Staff" 
               className="rounded-2xl h-56 w-full object-cover shadow-lg"
             />
             <img 
-              src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80" 
+              src={paintingImage} 
               alt="Painting & Finishing" 
               className="rounded-2xl h-56 w-full object-cover shadow-lg mt-6"
             />

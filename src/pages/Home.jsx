@@ -404,19 +404,8 @@ export default function Home({ onOpenQuote }) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {GALLERY_ITEMS.slice(0, 2).map((item, idx) => (
               <div key={idx} className="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-md">
-                <div className="grid grid-cols-2 gap-1 p-2 bg-slate-900">
-                  <div className="relative">
-                    <img src={item.before} alt="Before" className="w-full h-52 sm:h-60 object-cover rounded-l-2xl" />
-                    <span className="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">
-                      BEFORE
-                    </span>
-                  </div>
-                  <div className="relative">
-                    <img src={item.after} alt="After" className="w-full h-52 sm:h-60 object-cover rounded-r-2xl" />
-                    <span className="absolute top-3 right-3 bg-[#C5A059] text-[#0A1931] text-[10px] font-bold px-2 py-0.5 rounded shadow">
-                      AFTER
-                    </span>
-                  </div>
+                <div className="relative p-2 bg-slate-900">
+                  <img src={item.image} alt={item.title} className="w-full h-52 sm:h-60 object-cover rounded-2xl" />
                 </div>
                 <div className="p-5">
                   <div className="flex justify-between items-center mb-1">

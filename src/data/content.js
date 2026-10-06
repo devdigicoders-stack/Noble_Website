@@ -1,4 +1,17 @@
 // Business Details for Contact Page (Updated as per client requirement)
+import imgHousekeepingFull from '../assets/images/Housekeeping (Full-Time).png';
+import imgNanny from '../assets/images/Nanny Service.png';
+import imgHouseMaid from '../assets/images/House Maid Service.png';
+import imgPaintingWork from '../assets/images/Painting Work.png';
+import imgSprayPainting from '../assets/images/Spray Painting.png';
+import imgGypsum from '../assets/images/Gypsum.png';
+import imgWaterproofing from '../assets/images/Waterproofing.png';
+
+// Gallery Images
+import galleryGypsum from '../assets/images/GYPSUM Before and After.png';
+import galleryPainting from '../assets/images/Painting Before and After.png';
+import galleryWaterproofing from '../assets/images/Waterproofing Before and After.png';
+
 export const BRAND = {
   name: "Noble Housekeeping Trading & Contracting Company",
   shortName: "Noble",
@@ -42,7 +55,7 @@ export const SERVICES = [
       "Post-party and post-renovation cleaning",
       "Flexible hourly booking"
     ],
-    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=80",
+    image: imgHousekeepingFull,
     iconName: "Sparkles"
   },
   {
@@ -57,7 +70,7 @@ export const SERVICES = [
       "Dedicated staff for consistent quality",
       "Monthly contract plans"
     ],
-    image: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1000&q=80",
+    image: imgHousekeepingFull,
     iconName: "Home"
   },
   {
@@ -73,7 +86,7 @@ export const SERVICES = [
       "Meal preparation, play and routine activities",
       "Verified and trained caregivers"
     ],
-    image: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=1000&q=80",
+    image: imgNanny,
     iconName: "Heart"
   },
   {
@@ -88,7 +101,7 @@ export const SERVICES = [
       "Live-in and live-out options",
       "Short-term and long-term arrangements"
     ],
-    image: "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=1000&q=80",
+    image: imgHouseMaid,
     iconName: "Users"
   },
   {
@@ -103,7 +116,7 @@ export const SERVICES = [
       "Durable results for villas, apartments and offices",
       "Surface preparation and masking"
     ],
-    image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1000&q=80",
+    image: imgPaintingWork,
     iconName: "Paintbrush"
   },
   {
@@ -118,7 +131,7 @@ export const SERVICES = [
       "Neat wall preparation and surface sanding",
       "Premium quality paint application"
     ],
-    image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1000&q=80",
+    image: imgPaintingWork,
     iconName: "Palette"
   },
   {
@@ -133,7 +146,7 @@ export const SERVICES = [
       "Furniture and boundary fences",
       "Suitable for large areas and new projects"
     ],
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=80",
+    image: imgSprayPainting,
     iconName: "SprayCan"
   },
   {
@@ -148,7 +161,7 @@ export const SERVICES = [
       "Cove lighting integration",
       "Wall finishing for a premium aesthetic"
     ],
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80",
+    image: imgGypsum,
     iconName: "Layers"
   },
   {
@@ -163,7 +176,7 @@ export const SERVICES = [
       "Balconies and basement sealing",
       "Effective protection from leakage and damp"
     ],
-    image: "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1000&q=80",
+    image: imgWaterproofing,
     iconName: "ShieldCheck"
   }
 ];
@@ -238,22 +251,19 @@ export const GALLERY_ITEMS = [
   {
     title: "Painting Work & Finishes",
     category: "Painting",
-    before: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80",
-    after: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=600&q=80",
+    image: galleryPainting,
     desc: "Clean finishing and smooth coats for interior walls."
   },
   {
     title: "Gypsum Work & False Ceilings",
     category: "Gypsum",
-    before: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80",
-    after: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80",
+    image: galleryGypsum,
     desc: "Modern false ceilings, cove lighting and decorative designs."
   },
   {
     title: "Water Proofing Solutions",
     category: "Waterproofing",
-    before: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
-    after: "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=800&q=80",
+    image: galleryWaterproofing,
     desc: "Protection for roofs, bathrooms, and wet areas against leakage and damp."
   }
 ];

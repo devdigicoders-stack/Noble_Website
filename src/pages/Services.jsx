@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { CheckCircle2, ChevronRight, Phone, MessageSquare, Sparkles } from 'lucide-react';
 import { SERVICES, BRAND } from '../data/content';
 import { DynamicIcon } from '../components/DynamicIcon';
+import heroImage from '../assets/images/Housekeeping (Full-Time).png';
 
 export default function ServicesPage({ onOpenQuote }) {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -50,7 +51,7 @@ export default function ServicesPage({ onOpenQuote }) {
         {/* Background Image - Noble Specialized Services: Housekeeping, Maid, Nanny & Contracting */}
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=2000&q=85" 
+            src={heroImage} 
             alt="Noble Housekeeping & Contracting Services"
             className="w-full h-full object-cover object-[center_30%]"
           />

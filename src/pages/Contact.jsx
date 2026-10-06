@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Send, MessageSquare, CheckCircle, Shield } from 'lucide-react';
 import { BRAND, SERVICES } from '../data/content';
 import { Toast } from '../utils/alerts';
+import heroImage from '../assets/images/House Maid Service.png';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -50,7 +51,7 @@ export default function Contact() {
         {/* Background Image - Modern Doha Qatar Skyline & Customer Hub */}
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=2000&q=85" 
+            src={heroImage} 
             alt="Contact Noble Housekeeping Trading & Contracting Doha Qatar"
             className="w-full h-full object-cover object-[center_45%]"
           />

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Shield, CheckCircle2, Clock, Users, Award, FileText, Phone } from 'lucide-react';
 import { BRAND } from '../data/content';
+import heroImage from '../assets/images/House Maid Service.png';
 
 export default function WhyChooseUs({ onOpenQuote }) {
   const points = [
@@ -43,7 +44,7 @@ export default function WhyChooseUs({ onOpenQuote }) {
         {/* Background Image - Spotless Premium Home Interior */}
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=85" 
+            src={heroImage} 
             alt="Why Choose Noble Housekeeping & Contracting"
             className="w-full h-full object-cover object-center"
           />

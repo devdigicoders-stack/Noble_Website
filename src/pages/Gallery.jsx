@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { GALLERY_ITEMS } from '../data/content';
+import heroImage from '../assets/images/GYPSUM Before and After.png';
 
 export default function GalleryPage({ onOpenQuote }) {
   const [filter, setFilter] = useState('All');
@@ -17,7 +18,7 @@ export default function GalleryPage({ onOpenQuote }) {
         {/* Background Image - Noble Contracting: Painting, Waterproofing & Gypsum Work */}
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=2000&q=85" 
+            src={heroImage} 
             alt="Noble Housekeeping & Contracting Transformations"
             className="w-full h-full object-cover object-center"
           />
@@ -66,27 +67,12 @@ export default function GalleryPage({ onOpenQuote }) {
               key={idx} 
               className="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-lg hover:shadow-2xl transition duration-300"
             >
-              <div className="grid grid-cols-2 gap-1.5 p-2 bg-slate-900">
-                <div className="relative overflow-hidden rounded-l-2xl">
-                  <img 
-                    src={item.before} 
-                    alt={`${item.title} Before`} 
-                    className="w-full h-64 sm:h-72 object-cover"
-                  />
-                  <div className="absolute top-3 left-3 bg-red-600/90 text-white text-[11px] font-bold px-2.5 py-1 rounded shadow">
-                    BEFORE
-                  </div>
-                </div>
-                <div className="relative overflow-hidden rounded-r-2xl">
-                  <img 
-                    src={item.after} 
-                    alt={`${item.title} After`} 
-                    className="w-full h-64 sm:h-72 object-cover"
-                  />
-                  <div className="absolute top-3 right-3 bg-[#C5A059] text-[#0A1931] text-[11px] font-bold px-2.5 py-1 rounded shadow">
-                    AFTER
-                  </div>
-                </div>
+              <div className="relative p-2 bg-slate-900">
+                <img 
+                  src={item.image} 
+                  alt={item.title} 
+                  className="w-full h-64 sm:h-72 object-cover rounded-2xl"
+                />
               </div>
 
               <div className="p-6 sm:p-8 space-y-2">
