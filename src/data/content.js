@@ -1,8 +1,10 @@
 // Business Details for Contact Page (Updated as per client requirement)
+import imgHousekeepingShort from '../assets/images/Housekeeping (Short-Time).png';
 import imgHousekeepingFull from '../assets/images/Housekeeping (Full-Time).png';
 import imgNanny from '../assets/images/Nanny Service.png';
 import imgHouseMaid from '../assets/images/House Maid Service.png';
 import imgPaintingWork from '../assets/images/Painting Work.png';
+import imgWallPaint from '../assets/images/Wall Paint.png';
 import imgSprayPainting from '../assets/images/Spray Painting.png';
 import imgGypsum from '../assets/images/Gypsum.png';
 import imgWaterproofing from '../assets/images/Waterproofing.png';
@@ -55,7 +57,7 @@ export const SERVICES = [
       "Post-party and post-renovation cleaning",
       "Flexible hourly booking"
     ],
-    image: imgHousekeepingFull,
+    image: imgHousekeepingShort,
     iconName: "Sparkles"
   },
   {
@@ -131,7 +133,7 @@ export const SERVICES = [
       "Neat wall preparation and surface sanding",
       "Premium quality paint application"
     ],
-    image: imgPaintingWork,
+    image: imgWallPaint,
     iconName: "Palette"
   },
   {
